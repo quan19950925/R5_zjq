@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<script src="js/bootstrap.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/vue-router.min.js"></script>
+		<script src="js/vue-resource.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<router-view></router-view>
+			<ul class="zjq-footer">
+				<li>
+					<router-link to="/one">one</router-link>
+				</li>
+				<li>
+					<router-link to="/two">two</router-link>
+				</li>
+				<li>
+					<router-link to="/three">three</router-link>
+				</li>
+				<li>
+					<router-link to="/service">service</router-link>
+				</li>
+				<li>
+					<router-link to="/fine">fine</router-link>
+				</li>
+			</ul>
+
+		</div>
+	</body>
+
+</html>
+<template id="one">
+	<div>one</div>
+</template>
+<template id="two">
+	<div>two</div>
+</template>
+<template id="three">
+	<div>three</div>
+</template>
+<template id="zjq-service">
+	<div>
+		<ul class="zjq-routerChild">
+			<li>
+				<router-link to="/service/order">订单服务</router-link>
+			</li>
+			<li>
+				<router-link to="/service/refer">咨询服务</router-link>
+			</li>
+			<li><img src="img/mmexport1505172626460_03.png" /></li>
+		</ul>
+		
+		<router-view class="zjq-rout"></router-view>
+	</div>
+</template>
+<template id="fine">
+	<div>fine</div>
+</template>
+<template id="zjq-order">
+	<div>
+		<section class="zjq-serve">
+			<div class="zjq-serleft">
+				<img src="img/logo.png"/>
+				<div>
+					<p class="zjq-big">北京西-太原南(D2003)</p>
+					<p class="zjq-green">
+						<span>抢票单</span>
+						<span>12306订单</span>
+					</p>
+					<p class="zjq-hui">
+						10-01 13:17 至 10-01 16:49
+					</p>
+				</div>
+			</div>
+			<div class="zjq-serright">
+				<p class="zjq-big">正在抢票</p>
+				<p class="zjq-hui">￥434</p>
+			</div>
+		</section>
+		
+		<section class="zjq-serve1">
+			<div class="zjq-serleft">
+				<img src="img/logo.png"/>
+				<div>
+					<p class="zjq-big">太原-临汾(1485)</p>
+					<p class="zjq-green">
+						<span>抢票单</span>
+					</p>
+					<p class="zjq-hui">
+						10-03 15:05 至 10-03 18:57
+					</p>
+				</div>
+			</div>
+			<div class="zjq-serright">
+				<p class="zjq-big">正在抢票</p>
+				<p class="zjq-hui">￥73</p>
+			</div>
+		</section>
+		<p class="zjq-skip">怎么操作退票</p>
+		<p class="zjq-skip">退票费收取规定</p>
+		<p class="zjq-skip">怎么操作改签</p>
+		<p class="zjq-skip">改签手续费是多少</p>
+		<p class="zjq-skip">改签说明</p>
+		<p class="zjq-skip">更多问题</p>
+	</div>
+</template>
+<template id="zjq-refer">
+	<div>
+		<div class="zjq-inp">
+			<input type="text" placeholder="请输入问题关键词" />
+		</div>
+		<div class="zjq-redate">
+			<div>
+				<img src="img/mmexport1505172626460_07.png" alt="" />
+				<span>客服工作时间</span>
+			</div>
+			<div> > </div>
+		</div>
+		<section class="zjq-nav">
+			<div>
+				交通住宿
+			</div>
+			<ul>
+				<li>
+					<img src="img/1.png" alt="" />
+					火车票
+				</li>
+				<li>
+					<img src="img/2.png" alt="" />
+					国内机票
+				</li>
+				<li>
+					<img src="img/4.png" alt="" />
+					酒&nbsp;店
+				</li>
+				<li>
+					<img src="img/3.png" alt="" />
+					国际机票
+				</li>
+				<li>
+					<img src="img/5.png" alt="" />
+					汽车票
+				</li>
+				<li>
+					<img src="img/6.png" alt="" />
+					国内用车
+				</li>
+			</ul>
+		</section>
+		
+		<section class="zjq-nav">
+			<div>
+				度假旅游
+			</div>
+			<ul>
+				<li>
+					<img src="img/7.png" alt="" />
+					景点门票
+				</li>
+				<li>
+					<img src="img/8.png" alt="" />
+					周边游
+				</li>
+				<li>
+					<img src="img/9.png" alt="" />
+					国内游
+				</li>
+				<li>
+					<img src="img/10.png" alt="" />
+					巴士跟团游
+				</li>
+				<li>
+					<img src="img/11.png" alt="" />
+					游&nbsp;轮
+				</li>
+				<li>
+					<img src="img/12.png" alt="" />
+					出&nbsp;境
+				</li>
+				<li>
+					<img src="img/13.png" alt="" />
+					海外玩乐
+				</li>
+			</ul>
+		</section>
+		
+		<section class="zjq-nav">
+			<div>
+				同程服务
+			</div>
+			<ul>
+				<li>
+					<img src="img/14.png" alt="" />
+					电影票
+				</li>
+				<li>
+					<img src="img/15.png" alt="" />
+					金融理财
+				</li>
+				<li>
+					<img src="img/16.png" alt="" />
+					程程白条
+				</li>
+				<li>
+					<img src="img/17.png" alt="" />
+					保险
+				</li>
+				<li>
+					<img src="img/18.png" alt="" />
+					百旅会
+				</li>
+			</ul>
+		</section>
+		
+		
+		<section class="zjq-nav">
+			<div>
+				自助工具
+			</div>
+			<ul>
+				<li>
+					<img src="img/19.png" alt="" />
+					更换手机号
+				</li>
+				<li>
+					<img src="img/20.png" alt="" />
+					退款查询
+				</li>
+				<li>
+					<img src="img/21.png" alt="" />
+					我的发票
+				</li>
+				<li>
+					<img src="img/22.png" alt="" />
+					航班动态
+				</li>
+				<li>
+					<img src="img/23.png" alt="" />
+					在线值班
+				</li>
+				<li>
+					<img src="img/24.png" alt="" />
+					乘机宝典
+				</li>
+				<li>
+					<img src="img/25.png" alt="" />
+					旅游顾问
+				</li>
+			</ul>
+		</section>
+		<div class="zjq-bot">
+			意见反馈
+		</div>
+		<div class="zjq-both"></div>
+	</div>
+</template>
+<script src="js/index.js"></script>
